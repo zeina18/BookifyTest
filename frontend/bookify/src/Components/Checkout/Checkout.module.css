@@ -1,0 +1,327 @@
+.checkoutContainer {
+    padding: 6rem 2rem 2rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(7, 68, 101, 0.05) 0%, rgba(10, 90, 138, 0.05) 100%);
+  }
+  
+  .checkoutContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+  
+  .orderSummary {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    border: 1px solid rgba(7, 68, 101, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .orderSummary:hover {
+    transform: translateY(-5px);
+  }
+  
+  .orderSummary h2,
+  .paymentSection h2 {
+    color: #074465;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .orderSummary h2::after,
+  .paymentSection h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #074465, #0a5a8a);
+    border-radius: 2px;
+  }
+  
+  .matchInfo {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(7, 68, 101, 0.03);
+    border: 1px solid rgba(7, 68, 101, 0.1);
+  }
+  
+  .matchInfo h3 {
+    font-size: 1.4rem;
+    color: #074465;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .matchDetails {
+    color: #555;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+  }
+  
+  .venue {
+    color: #666;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .venue::before {
+    content: '📍';
+  }
+  
+  .ticketsList {
+    margin-bottom: 2rem;
+  }
+  
+  .ticketItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.2rem;
+    background: white;
+    border: 1px solid rgba(7, 68, 101, 0.1);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .ticketItem:hover {
+    transform: translateX(5px);
+    border-color: #074465;
+  }
+  
+  .ticketInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .ticketType {
+    font-weight: 600;
+    color: #074465;
+    font-size: 1.1rem;
+  }
+  
+  .ticketDetails {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .assignedTo {
+    font-size: 0.95rem;
+    color: #0a5a8a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .assignedTo::before {
+    content: '👤';
+  }
+  
+  .ticketPrice {
+    font-weight: 600;
+    color: #074465;
+    font-size: 1.2rem;
+  }
+  
+  .totalSection {
+    padding: 1.5rem;
+    background: rgba(7, 68, 101, 0.03);
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  
+  .subtotal,
+  .serviceFee,
+  .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .total {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #074465;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(7, 68, 101, 0.1);
+  }
+  
+  .paymentSection {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(7, 68, 101, 0.1);
+  }
+  
+  .paymentMethods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .paymentMethod {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 2px solid rgba(7, 68, 101, 0.1);
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .paymentMethod:hover {
+    border-color: #074465;
+    transform: translateY(-3px);
+  }
+  
+  .paymentMethod.selected {
+    border-color: #074465;
+    background: rgba(7, 68, 101, 0.03);
+    transform: translateY(-3px);
+  }
+  
+  .paymentIcon {
+    font-size: 1.5rem;
+  }
+  
+  .paymentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .formGroup label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #074465;
+  }
+  
+  .formGroup input {
+    padding: 1rem;
+    border: 2px solid rgba(7, 68, 101, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(7, 68, 101, 0.02);
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: #074465;
+    background: white;
+  }
+  
+  .error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .error::before {
+    content: '⚠️';
+  }
+  
+  .payButton {
+    background: linear-gradient(135deg, #074465 0%, #0a5a8a 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .payButton:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(7, 68, 101, 0.2);
+  }
+  
+  .payButton:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  @media (max-width: 1024px) {
+    .checkoutContent {
+      grid-template-columns: 1fr;
+    }
+  
+    .orderSummary {
+      position: relative;
+      top: 0;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .checkoutContainer {
+      padding: 5rem 1rem 1rem;
+    }
+  
+    .paymentMethods {
+      grid-template-columns: 1fr;
+    }
+  
+    .formRow {
+      grid-template-columns: 1fr;
+    }
+  
+    .orderSummary h2,
+    .paymentSection h2 {
+      font-size: 1.5rem;
+    }
+  
+    .matchInfo h3 {
+      font-size: 1.2rem;
+    }
+  
+    .ticketType,
+    .ticketPrice {
+      font-size: 1rem;
+    }
+  } 

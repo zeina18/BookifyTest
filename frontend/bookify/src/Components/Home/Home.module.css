@@ -1,0 +1,144 @@
+.card-hover {
+
+    text-align: center;
+}
+.card-hover , .Sports , .Movies , .Trips , .Events{
+    
+    transition: all ease-out 0.2s;
+h3 , p {
+    transition: all 0.2s ease-in-out;
+}
+}
+.card-hover:hover {
+   h3{
+    transform: scale(1.1);
+   }
+   cursor: pointer;
+    transform: scale(1.1)
+}
+.Sports:hover {
+   
+    p{
+        transform: scale(1.1);
+        color: rgb(72, 180, 72);
+
+    }
+    color: rgb(9, 175, 9);
+}
+.Movies:hover {
+    p{
+        transform: scale(1.1);
+        color: rgb(243, 191, 94);
+
+    }
+    color: orange;
+}
+.Events:hover {
+    p{
+        transform: scale(1.1);
+        color: rgb(255, 74, 74);
+
+    }
+    color: red;
+}
+.Trips:hover {
+    p{
+        transform: scale(1.1);
+        color:rgba(58, 58, 248, 0.993)
+    }
+    color: blue;
+}
+/* Faded background when message is shown */
+.faded {
+    filter: blur(2px);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  /* Overlay styling */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Message styling */
+  .loginMessage {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  .messageText {
+    color: #dc2626;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .loginButton {
+    background-color: #6D83F2;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .loginButton:hover {
+    background-color: #5b6ed6;
+  }
+  
+  .cancelButton {
+    background-color: #e5e7eb;
+    color: #374151;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .cancelButton:hover {
+    background-color: #d1d5db;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }

@@ -1,0 +1,153 @@
+.trips-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.gradient-text {
+  position: relative;
+  font-size: 32px;
+  font-weight: bold;
+  color: #004aad; 
+}
+
+.gradient-text::after {
+  content: attr(data-text);
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, #007bff, #004aad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.sub-heading {
+  font-size: 18px;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.trips-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.trip-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 270px;
+  text-align: center;
+  background-color: #09092f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.trip-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  color: #007bff;
+  .trip-image {
+    transform: scale(1.03);
+  }
+  .trip-price{
+    color: red;
+  }
+}
+
+.trip-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+transition: all ease-in-out 0.2s;
+}
+
+.trip-title {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.trip-description,
+.trip-program,
+.trip-price {
+  font-size: 14px;
+  text-align: left;
+  margin: 5px 0;
+  padding: 0 10px;
+}
+
+.booking-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.booking-section label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.booking-section input {
+  width: 50px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.book-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  
+  /* This pushes the button to the bottom of the card */
+  margin-top: auto;
+}
+
+.book-button:hover {
+  background: #00458f;
+  cursor: pointer;
+}
+
+.book-icon {
+  width: 20px;
+  height: 20px;
+}
+.vr-button {
+  margin-top: 10px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+}
+
+.vr-button:hover {
+  background: #a06000;
+  cursor: pointer;
+}
